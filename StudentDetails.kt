@@ -9,13 +9,15 @@ class StudentDetails() :CollageDetails(){
     var studentArrayList = ArrayList<StudentDetails>()
     var addStudentStream = ""
     var studentSpiData=0.0
+    var collageName = ""
 
-    constructor(studentEnrolment:Int,studentName:String,studentSpi:Double,studentStream:String):this()
+    constructor(studentEnrolment:Int,studentName:String,studentSpi:Double,studentStream:String,collageName:String):this()
     {
         this.studentEnrolment=studentEnrolment
         this.studentName = studentName
         this.studentSpi = studentSpi
         this.studentStream = studentStream
+        this.collageName = collageName
     }
 
     fun addStudent(){
@@ -75,7 +77,7 @@ class StudentDetails() :CollageDetails(){
                     break
                 }
                 else{
-                    studentArrayList.add(StudentDetails(studentEnrolment,studentName,studentSpi,addStudentStream))
+                    studentArrayList.add(StudentDetails(studentEnrolment,studentName,studentSpi,addStudentStream,clgName))
                 }
             }
         }
